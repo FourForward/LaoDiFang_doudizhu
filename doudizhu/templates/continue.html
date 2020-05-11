@@ -7,7 +7,24 @@
 <body>
 <div>请选择要继续的场次</div>
 <table>
-
+    <tr>
+        <td>开始时间</td>
+        <td>参与人1</td>
+        <td>参与人2</td>
+        <td>参与人3</td>
+        <td>参与人4</td>
+    </tr>
+    {% for foo in session %}
+        <tr>
+            <td>{{ foo.begin_time }}</td>
+            <td>{{ foo.u1_id }}</td>
+            <td>{{ foo.u2_id }}</td>
+            <td>{{ foo.u3_id }}</td>
+            <td>{{ foo.u4_id }}</td>
+            <td><a href="">继续</a></td>
+        </tr>
+    {% endfor %}
+    
 </table>
 </body>
 </html>
